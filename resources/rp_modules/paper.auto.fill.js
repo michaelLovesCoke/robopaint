@@ -71,14 +71,14 @@ module.exports = function(paper) {
       var setMap = { // Map global settings to local stroke module settings.
         traceIterationMultiplier: parseInt(set.autofilliteration),
         lineWidth: paper.utils.getLineWidth(set.autofillwidth),
-        flattenResolution: parseInt(set.fillprecision),
+        flattenResolution: parseFloat(set.fillprecision),
         fillType: set.filltype,
         overlayFillAlignPath: set.fillspiralalign == true, // jshint ignore:line
         angle: parseInt(set.fillangle),
         randomizeAngle: set.fillrandomize == true, // jshint ignore:line
         noFill: set.autofillenabled == false, // jshint ignore:line
         hatch: set.fillhatch == true, // jshint ignore:line
-        spacing: parseInt(set.fillspacing) * 2,
+        spacing: parseFloat(set.fillspacing) * 2,
         insetAmount: set.fillinset,
         checkFillOcclusion: set.fillocclusionfills == true, // jshint ignore:line
         threshold: parseInt(set.fillgroupingthresh)

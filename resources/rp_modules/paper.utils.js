@@ -40,7 +40,7 @@ module.exports = function(paper) {
         if (useStoke) {
           return robopaint.settings.penmode === 1 ? 1 : 10;
         } else {
-          return parseInt(robopaint.settings.fillspacing);
+          return parseFloat(robopaint.settings.fillspacing);
         }
       } else {
         return width;

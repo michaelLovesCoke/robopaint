@@ -265,7 +265,7 @@ cncserver.paths = {
 
         // Increment distance, only after the first check
         // allows for starting at distance 0
-        distance+= parseInt(options.strokeprecision);
+        distance+= parseFloat(options.strokeprecision);
 
         // If the path is still visible here
         // Assume as always visible if we're not actually checking
@@ -398,7 +398,7 @@ cncserver.paths = {
     runNextFill();
 
     function runNextFill() {
-      pathPos+= parseInt(options.fillprecision);
+      pathPos+= parseFloat(options.fillprecision);
       p = $fill.getPoint(pathPos);
 
       // Short circuit for full path trace completion
@@ -483,7 +483,7 @@ cncserver.paths = {
       options.fillangle = options.fillangle == 45 ? -45 : 0;
     }
 
-    options.fillprecision = parseInt(options.fillprecision);
+    options.fillprecision = parseFloat(options.fillprecision);
 
     var linePos = 0;
     var lineIteration = 0;
@@ -712,7 +712,7 @@ cncserver.paths = {
 
     // Fill up the slow point path finder points
     function runNextFill() {
-      fillCount+= parseInt(options.fillprecision);
+      fillCount+= parseFloat(options.fillprecision);
       p = $fill.getPoint(fillCount);
 
       // Spiral is outside top left, and therefore can never return
